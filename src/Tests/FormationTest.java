@@ -26,21 +26,27 @@ class FormationTest
     }
 
     @org.junit.jupiter.api.Test
-    void getNombreDePresents()
+    short getNombreDePresents()
     {
         // Cas n°1 : On ajoute les 2 premiers participants à la formation
-
-
+        formation.AjouterParticipant(participant1);
+        formation.AjouterParticipant(participant2);
+        assertEquals(1,getNombreDePresents());
 
         // Cas n°2 : on ajoute le reste des participants
 
 
+        return 0;
     }
 
     @org.junit.jupiter.api.Test
     void calculerFraisRemboursementKilometriques()
     {
         // Cas n°1 : On ajoute les 3 premiers participants à la formation
+        formation.AjouterParticipant(participant1);
+        formation.AjouterParticipant(participant2);
+        formation.AjouterParticipant(participant3);
+        assertEquals();
 
 
 

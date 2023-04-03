@@ -28,8 +28,13 @@ public class Formation
     public int GetNombreDePresents()
     {
         // A compléter ici
-
-        return 0;
+        int i = 0;
+        for(Participant part: lesParticipants) {
+            if (part.isEstPresent()) {
+                i++;
+            }
+        }
+        return i;
     }
 
     // Cette méthode permet de calculer le montant total
@@ -38,9 +43,13 @@ public class Formation
     // On rembourse 1.89 du KM
     public double CalculerFraisRemboursementKilometriques()
     {
+        double total = 0;
         // A compléter ici
+        for (Participant part : this.lesParticipants){
+             total = part.getNbKm() * this.prixFormation;
+        }
 
-        return 0;
+        return total;
     }
 
     // Cette méthode permet de calculer le taux de présence
@@ -48,6 +57,7 @@ public class Formation
     public double TauxDePresence()
     {
         // A compléter ici
+
         return 0;
     }
 
@@ -56,7 +66,10 @@ public class Formation
     // les frais kilométriques versés
     public double BeneficeFormation()
     {
+        double benef;
+        benef = (GetNombreDePresents() * this.prixFormation) - this.CalculerFraisRemboursementKilometriques();
         // A compléter ici
-        return  0;
+
+        return  benef;
     }
 }

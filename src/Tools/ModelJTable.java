@@ -35,6 +35,12 @@ public class ModelJTable extends AbstractTableModel
     public void loadDatasCaptage(ArrayList<Captage> uneListe)
     {
         // A compléter ici
+        colonnes = new String[]{"Numéro","Description","Volume"};
+        lignes = new Object[uneListe.size()][3];
+        int i= 0;
+        for (Captage capt: uneListe){
+            //lignes[i][0] = capt.
+        }
 
     }
 }
